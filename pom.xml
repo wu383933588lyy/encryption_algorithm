@@ -13,6 +13,12 @@
         <maven.compiler.target>8</maven.compiler.target>
     </properties>
 
-
+    <dependencies>
+        <dependency>
+            <groupId>org.bouncycastle.bcprov-ext-jdk15on.1.57.org.bouncycastle</groupId>
+            <artifactId>bcprov-ext-jdk15on</artifactId>
+            <version>1.57</version>
+        </dependency>
+    </dependencies>
 
 </project>

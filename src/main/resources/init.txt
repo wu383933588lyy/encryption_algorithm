@@ -1,0 +1,19 @@
+-- 生成数字证书
+keytool -genkeypair -keyalg RSA -keysize 1024 -sigalg SHA1withRSA -validity 36500 -alias mycert -keystore my.keystore -dname "CN=www.sample.com, OU=sample, O=sample, L=BJ, ST=BJ, C=CN" -keypass 123456 -storepass 456789
+
+说明：
+keytool     命令
+-genkeypair 生成数字证书
+-keyalg RSA 使用 RSA 算法
+-keysize 1024 密钥长度 1024
+-sigalg SHA1withRSA 指定签名算法
+-validity 36500  指定数字证书有效期 100年
+-alias mycert  指定证书别名
+-keystore my.keystore  指定 keystore 文件
+-dname "CN=www.sample.com, OU=sample, O=sample, L=BJ, ST=BJ, C=CN"   指定证书属性
+-keypass 123456  指定证书密码
+-storepass 456789 指定 keystore 文件密码
+
+
+-- 查看 keystore 文件中的证书
+keytool -list -keystore my.keystore -storepass 456789
